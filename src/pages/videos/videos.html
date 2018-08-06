@@ -1,0 +1,44 @@
+<!--
+  Generated template for the VideosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title><ion-icon name="videocam"></ion-icon> Videos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+
+<ion-content >
+
+<ion-list>
+  <div *ngFor="let post of posts; let first = first; let odd = odd;">
+
+    <div class="first-post" (click)="postTapped($event, post)">
+        <div class="img-container">
+          <img [src]="post.source_url" class="post-image" alt=''/>
+        </div>
+        <div class="post-title">
+        <h2 [innerHTML]="post.title.rendered" ></h2>
+        </div>
+    <hr/>
+    </div>
+  </div>
+</ion-list>
+
+
+
+ <ion-infinite-scroll [enabled]="morePagesAvailable" (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content
+    loadingSpinner="bubbles"
+    loadingText="Loading more posts ...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

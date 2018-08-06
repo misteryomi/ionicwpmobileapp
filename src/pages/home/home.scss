@@ -1,3 +1,41 @@
 page-home {
+/*
+  .first-post {
+      height: 250px;
+      width: 100%;
+      text-align:center;
+      overflow:hidden;
+    background: #000000 url('../../assets/img/bg.png');
+    background-position: 100%;
+    transition: all ease-in-out 0.9s;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .first-post .post-title{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    text-align:left;
+    width:100%;
+    padding: 10px;
+    vertical-align: top;
+  }
+  .first-post .overlay{
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background: rgba(47, 40, 51, 0.7);
+  }
+  */
+.toolbar-title-md {
+    padding: 0 6px;
+    color: #feffd1!important;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}  
 
 }

@@ -1,0 +1,52 @@
+<ion-header #head>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="content" hide-header-footer [header]="head">
+<!--ion-refresher (ionRefresh)="doRefresh($event)">
+   <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="bubbles" refreshingText="Refreshing...">
+   </ion-refresher-content>
+ </ion-refresher-->
+<ion-list>
+  <ion-item *ngFor="let post of posts" (click)="postTapped($event, post)">
+    <ion-thumbnail item-start>
+      <img [src]="post.source_url">
+    </ion-thumbnail>
+    <h2 [innerHTML]="post.title.rendered"></h2>
+    <p [innerHTML]="post.excerpt.rendered"></p>
+  </ion-item>
+</ion-list>
+
+
+
+ <ion-infinite-scroll [enabled]="morePagesAvailable" (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content
+    loadingSpinner="bubbles"
+    loadingText="Loading more posts ...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+<!--ion-list>
+    <ion-list-header *ngIf="!categoryTitle" class="cattitle"><span class="title">LATEST</span></ion-list-header>
+    <ion-list-header *ngIf="categoryTitle" class="cattitle"><span class="title">{{categoryTitle}}</span></ion-list-header>
+  <ion-item *ngFor="let post of posts"  (click)="postTapped($event, post)"  text-wrap>
+    <h2 [innerHTML]="post.title.rendered"></h2>
+     <ion-thumbnail item-start class="postimg">
+        <img [src]="post.source_url" alt=""/>
+    </ion-thumbnail>
+     <button ion-button clear item-end>  <ion-icon name="ios-arrow-forward-outline" class="post-arrow"></ion-icon></button>
+  </ion-item>
+ <ion-infinite-scroll [enabled]="morePagesAvailable" (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content
+    loadingSpinner="bubbles"
+    loadingText="Loading more posts ...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-list-->
+
+
+ 
+</ion-content>

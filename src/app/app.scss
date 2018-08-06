@@ -14,3 +14,147 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+/* latin */
+@font-face {
+  font-family: Neucha;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Antic Slab Regular'), local('AnticSlab-Regular'), url(https://fonts.gstatic.com/s/anticslab/v6/bWt97fPFfRzkCa9Jlp6IacVcXA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+body{
+    font-family: Neucha !important;
+}
+p {
+	font-familt: 'Brawler' !important;
+}
+.title {
+	text-transform: capitalize;
+	font-weight: normal;
+	font-size: 11px;
+}
+super-tabs-toolbar > ion-toolbar.toolbar .tab-buttons-container .tab-buttons super-tab-button.title-and-icon ion-icon {
+    color: #7b7a7a;
+}
+.post-image {
+	  background: #FFF url('../assets/imgs/post-bg.png') no-repeat center center;
+	transition: all ease-in-out 0.9s;
+}
+.toolbar-md-dark .toolbar-background-md {
+}
+.toolbar-md-dark .toolbar-background-md {
+	 background: #8315c7 ; /*#8e3fca  url('../assets/imgs/logo.png') no-repeat center center*/
+}
+.toolbar-title-md {
+	text-align: center;
+}
+.item-md h2 {
+    margin: 2px 0;
+    font-size: 1.6rem;
+    font-weight: normal;
+    color: #332c38; /*f12e00;*/
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.item-md h2 {
+	color: #332c38; /*d80551 #2b2b2b; */
+	/*font-size: 1.4rem;*/
+}
+.item-md p {
+    line-height: 1.4em;
+}
+.label-md {
+	margin-top: 0;
+}
+.no-border {
+	border:none;
+}
+.first-post {
+	margin-top: 5px;
+	position: relative;
+}
+.first-post h2 {
+    font-weight: 200;
+	font-size: 25px;
+	padding: 5px 5px 2px;
+}
+.first-post .img-container{
+	overflow: hidden;
+	padding-bottom: 5px;
+	margin-bottom:5px;
+	height: 200px;
+}
+.first-post img-container img{
+	width: 100%;
+	height: 100%;
+}
+.first-post p {
+	padding: 0 10px;	
+}
+.first-post .post-title {
+	background: #0e0e0e;
+    background: rgba(19, 28, 31, 0.91);
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+}
+.no-bg {
+    background: none;
+    box-shadow: none;
+    margin-top: 0!important;	
+}
+.toolbar-title-md {
+    padding: 0 6px;
+    color: #feffd7; /*#feffd7;*/
+}
+.toolbar-md-dark ion-icon {
+	font-size: 16px;
+}
+super-tab-button .title {
+	font-family: "Trebuchet Ms"!important;
+}
+
+[ng-reflect-icon="home"].selected, .selected .ion-md-home{
+	color: #8315c7!important;
+}
+[ng-reflect-icon="camera"].selected, .selected .ion-md-camera{
+	color: #31a797!important;
+}
+[ng-reflect-icon="book"].selected, .selected .ion-md-book{
+	color: #ff306a!important;
+}
+[ng-reflect-icon="laptop"].selected, .selected .ion-md-laptop{
+	color: #2d2d2d!important;
+}
+[ng-reflect-icon="headset"].selected, .selected .ion-md-headset{
+	color: #de1010!important;
+}
+[ng-reflect-icon="videocam"].selected, .selected .ion-md-videocam{
+	color: #4ee459!important;
+}
+[ng-reflect-icon="bonfire"].selected, .selected .ion-md-chatboxes{
+	color: #a444cc!important;
+}
+[ng-reflect-icon="bonfire"].selected, .selected .ion-md-bonfire{
+	color: #3c00cc!important;
+}
+[ng-reflect-icon="bookmarks"].selected, .selected .ion-md-bookmarks{
+	color: #c75f8f!important;
+}
+[ng-reflect-icon="basket"].selected, .selected .ion-md-basket{
+	color: #79ad5e!important;
+}
+[ng-reflect-icon="globe"].selected, .selected .ion-md-globe{
+	color: blue!important;
+}
+[ng-reflect-icon="add-circle"].selected, .selected .ion-md-add-circle{
+	color: #c71585!important;
+}
+[ng-reflect-icon="call"].selected, .selected .ion-md-call{
+	color: #000!important;
+}

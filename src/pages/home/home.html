@@ -1,17 +1,69 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
+<ion-header #head >
+  <ion-navbar color="dark" class="headerlogoimg">
+    <ion-title> Talke</ion-title>
+   <button ion-button icon-only menuToggle class="bar-dark">
+    <ion-icon name="menu"></ion-icon>
+  </button>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<!--ion-content class="content" hide-header [header]="head"-->
+<ion-content class="content">
+<!--ion-refresher (ionRefresh)="doRefresh($event)">
+   <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="bubbles" refreshingText="Refreshing...">
+   </ion-refresher-content>
+ </ion-refresher-->
+<ion-list>
+  <div *ngFor="let post of posts; let first = first; let odd = odd;">
+
+    <div *ngIf="first" class="first-post" (click)="postTapped($event, post)">
+        <h2 [innerHTML]="post.title.rendered" ></h2>
+        <div class="img-container">
+          <img [src]="post.source_url" class="post-image" alt=''/>
+        </div>
+        <p [innerHTML]="post.excerpt.rendered"></p>
+    <hr/>
+    </div>
+
+    <ion-item (click)="postTapped($event, post)" [class.first-item]="first"
+     *ngIf="!first">
+      <ion-thumbnail item-start>
+        <img [src]="post.source_url" class="post-image" alt=''>
+      </ion-thumbnail>
+      <h2 text-wrap [innerHTML]="post.title.rendered"></h2>
+      <p [innerHTML]="post.excerpt.rendered"></p>
+    </ion-item>
+  </div>
+</ion-list>
+
+
+
+ <ion-infinite-scroll [enabled]="morePagesAvailable" (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content
+    loadingSpinner="bubbles"
+    loadingText="Loading more posts ...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+<!--ion-list>
+    <ion-list-header *ngIf="!categoryTitle" class="cattitle"><span class="title">LATEST</span></ion-list-header>
+    <ion-list-header *ngIf="categoryTitle" class="cattitle"><span class="title">{{categoryTitle}}</span></ion-list-header>
+  <ion-item *ngFor="let post of posts"  (click)="postTapped($event, post)"  text-wrap>
+    <h2 [innerHTML]="post.title.rendered"></h2>
+     <ion-thumbnail item-start class="postimg">
+        <img [src]="post.source_url" alt=""/>
+    </ion-thumbnail>
+     <button ion-button clear item-end>  <ion-icon name="ios-arrow-forward-outline" class="post-arrow"></ion-icon></button>
+  </ion-item>
+ <ion-infinite-scroll [enabled]="morePagesAvailable" (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content
+    loadingSpinner="bubbles"
+    loadingText="Loading more posts ...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-list-->
+
+
+ 
 </ion-content>

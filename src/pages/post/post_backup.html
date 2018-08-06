@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title *ngIf="post">
+      {{post.title.rendered}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="post" class="post">
+
+  <ion-card>
+    <ion-card-content>
+    <ion-card-content>
+      <div  class="post-image" (click)="postTapped($event, post)">
+        <img [src]="post.source_url" alt=""/>
+        <div class="overlay"></div>
+        <div class="post-title">
+        <ion-card-title [innerHTML]="post.title.rendered" class="title"></ion-card-title>
+          <span>
+           {{post.date.split('T')[0]}}
+         </span>
+       </div> 
+      </div>
+      <p [innerHTML]="post.excerpt.rendered"></p>
+    </ion-card-content>
+    <div class="post-image"><img src="{{featuredmedia.source_url}}" alt="" class="img" /></div>
+
+    <div class="post-title" [innerHTML]="post.title.rendered"></div>
+    </ion-card-content>
+   <ion-row padding>
+      <ion-col>
+        <ion-icon name='md-calendar'></ion-icon>
+        {{post.date.split('T')[0]}}
+      </ion-col>
+      <ion-col text-right>
+        <ion-icon name="person"></ion-icon>
+        {{user}}
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+    <p class="post-content" [innerHTML]="post.content.rendered"></p>
+     </ion-card-content>
+    <p class="bold-title">Categories:</p>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="category-col" *ngFor="let category of categories">
+          <ion-badge (click)="goToCategoryPosts(category.id, category.name)">{{category.name}}</ion-badge>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <!--p class="bold-title">Comments:</p>
+    <ion-item *ngFor="let comment of comments">
+      <ion-avatar item-start>
+        <img src="{{comment.author_avatar_urls[24]}}">
+      </ion-avatar>
+      <h2>{{comment.author_name}}</h2>
+      <p [innerHTML]="comment.content.rendered"></p>
+    </ion-item>
+    <ion-infinite-scroll [enabled]="morePagesAvailable" (ionInfinite)="loadMoreComments($event)">
+      <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more comments...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll-->
+   </ion-card>
+
+ </div>
+</ion-content>
+<!--ion-footer>
+ <ion-toolbar>
+  <button ion-button block (click)="createComment()">Add a Comment</button>
+ </ion-toolbar>
+</ion-footer-->
