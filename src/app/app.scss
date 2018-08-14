@@ -44,7 +44,7 @@ super-tabs-toolbar > ion-toolbar.toolbar .tab-buttons-container .tab-buttons sup
 .toolbar-md-dark .toolbar-background-md {
 }
 .toolbar-md-dark .toolbar-background-md {
-	 background: #8315c7 ; /*#8e3fca  url('../assets/imgs/logo.png') no-repeat center center*/
+	 background: #280f46 ; /*#8315c7 #8e3fca  url('../assets/imgs/logo.png') no-repeat center center*/
 }
 .toolbar-title-md {
 	text-align: center;
@@ -71,7 +71,6 @@ super-tabs-toolbar > ion-toolbar.toolbar .tab-buttons-container .tab-buttons sup
 	border:none;
 }
 .first-post {
-	margin-top: 5px;
 	position: relative;
 }
 .first-post h2 {
@@ -100,7 +99,8 @@ super-tabs-toolbar > ion-toolbar.toolbar .tab-buttons-container .tab-buttons sup
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100px;
+    height: auto;
+    padding-bottom: 10px;
     overflow: hidden;
 }
 .no-bg {
@@ -118,43 +118,48 @@ super-tabs-toolbar > ion-toolbar.toolbar .tab-buttons-container .tab-buttons sup
 super-tab-button .title {
 	font-family: "Trebuchet Ms"!important;
 }
+.img-container {
+  position: relative;
+  width: 100%
+}
+.img-container img{
+  width: 100%;
+}
 
 [ng-reflect-icon="home"].selected, .selected .ion-md-home{
-	color: #8315c7!important;
+	color: #280f46!important;
 }
 [ng-reflect-icon="camera"].selected, .selected .ion-md-camera{
-	color: #31a797!important;
+	color: #f469bc!important; /*#31a797*/
 }
 [ng-reflect-icon="book"].selected, .selected .ion-md-book{
-	color: #ff306a!important;
+	color: #ff306a!important; /*#ff306a*/
 }
 [ng-reflect-icon="laptop"].selected, .selected .ion-md-laptop{
-	color: #2d2d2d!important;
+	color: #ff3a3a!important;/*#31a797*/
 }
 [ng-reflect-icon="headset"].selected, .selected .ion-md-headset{
-	color: #de1010!important;
+	color: #770071!important;/*#de1010*/
 }
 [ng-reflect-icon="videocam"].selected, .selected .ion-md-videocam{
-	color: #4ee459!important;
+	color: #4ee459!important;/*#31a797*/
 }
-[ng-reflect-icon="bonfire"].selected, .selected .ion-md-chatboxes{
-	color: #a444cc!important;
-}
+
 [ng-reflect-icon="bonfire"].selected, .selected .ion-md-bonfire{
-	color: #3c00cc!important;
+	color: #3c8fca!important;/*#fb9048*/
 }
 [ng-reflect-icon="bookmarks"].selected, .selected .ion-md-bookmarks{
-	color: #c75f8f!important;
+	color: #bdcc1c!important;/*#31a797*/
 }
 [ng-reflect-icon="basket"].selected, .selected .ion-md-basket{
-	color: #79ad5e!important;
+	color: #0092b7!important;/*#79ad5e*/
 }
 [ng-reflect-icon="globe"].selected, .selected .ion-md-globe{
-	color: blue!important;
+	color: blue!important;/*#31a797*/
 }
 [ng-reflect-icon="add-circle"].selected, .selected .ion-md-add-circle{
-	color: #c71585!important;
+	color: #c71585!important;/*#31a797*/
 }
 [ng-reflect-icon="call"].selected, .selected .ion-md-call{
-	color: #000!important;
+	color: #000!important;/*#31a797*/
 }

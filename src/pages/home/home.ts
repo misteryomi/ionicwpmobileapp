@@ -38,8 +38,7 @@ export class HomePage {
     if(!(this.posts.length > 0)){
 
           let loading = this.loadingCtrl.create({
-            content: "Please wait...",
-            duration: 3000
+            content: "Loading...",
           });
       loading.present();
 
@@ -60,6 +59,7 @@ export class HomePage {
   }
 
   postTapped(event, post) {
+  //console.log(post);
 		this.navCtrl.push(PostPage, {
 		  item: post
 		});
